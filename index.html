@@ -554,19 +554,19 @@ footer{background:var(--charcoal);border-top:1px solid rgba(255,255,255,0.04);pa
         <div class="pricing-tag">Individual</div>
         <div class="pricing-name">Personal Session</div>
         <div class="pricing-desc">Perfect for individuals, creators, and small sessions</div>
-        <div class="pricing-amount">10€ <span>/ all day</span></div>
-        <div class="pricing-half">5€ <span>/ 4 hours</span></div>
+        <div class="pricing-amount">10€ <span>/ 2 hours</span></div>
+        <div class="pricing-half">20€ <span>/ all day</span></div>
         <div class="pricing-divider"></div>
-        <div class="pricing-per">per person · full day access</div>
+        <div class="pricing-per">per person</div>
       </div>
       <div class="pricing-card featured">
         <div class="pricing-tag">Group</div>
         <div class="pricing-name">Full Group Access</div>
         <div class="pricing-desc">Ideal for teams, meetings, celebrations, and events</div>
-        <div class="pricing-amount">70€ <span>/ all day</span></div>
-        <div class="pricing-half">35€ <span>/ 4 hours</span></div>
+        <div class="pricing-amount">35€ <span>/ 2 hours</span></div>
+        <div class="pricing-half">70€ <span>/ all day</span></div>
         <div class="pricing-divider"></div>
-        <div class="pricing-per">up to 10 people · full day access</div>
+        <div class="pricing-per">up to 10 people</div>
       </div>
     </div>
     <p class="pricing-note reveal reveal-delay-2">All prices include full access to the venue. Contact us for customized packages and extended hours.</p>
@@ -698,8 +698,8 @@ footer{background:var(--charcoal);border-top:1px solid rgba(255,255,255,0.04);pa
               <div class="form-group">
                 <label for="bookDuration">Duration</label>
                 <select id="bookDuration" onchange="updateBookingPrice()">
+                  <option value="2hours">2 Hours</option>
                   <option value="full">Full Day</option>
-                  <option value="half">4 Hours (Half Day)</option>
                 </select>
               </div>
             </div>
@@ -1148,20 +1148,20 @@ document.getElementById('nextMonth').addEventListener('click', function(){
   renderCalendar();
 });
 
-function calcPrice(guests, isFullDay){
+function calcPrice(guests, duration){
   guests = parseInt(guests) || 1;
+  const isTwoHours = duration === '2hours';
   if(guests <= 1){
-    return isFullDay ? 10 : 5;
+    return isTwoHours ? 10 : 20;
   } else {
-    // Up to 10 people
-    return isFullDay ? 70 : 35;
+    return isTwoHours ? 35 : 70;
   }
 }
 
 window.updateBookingPrice = function(){
   const guests = parseInt(document.getElementById('bookGuests').value) || 1;
-  const isFullDay = document.getElementById('bookDuration').value === 'full';
-  const price = calcPrice(guests, isFullDay);
+  const duration = document.getElementById('bookDuration').value;
+  const price = calcPrice(guests, duration);
   const label = guests <= 1 ? '1 person' : (guests > 10 ? guests + ' people (contact for custom pricing)' : 'Up to 10 people');
   document.getElementById('priceDisplay').textContent = '€' + price + ' · ' + label;
 }
@@ -1175,7 +1175,7 @@ function advanceToStep2(){
   const summary = document.getElementById('bookingSummary');
   const guests = document.getElementById('bookGuests').value || '—';
   const duration = document.getElementById('bookDuration').value;
-  const durText = duration === 'full' ? 'Full Day' : '4 Hours';
+  const durText = duration === '2hours' ? '2 Hours' : 'Full Day';
   const priceEl = document.getElementById('priceDisplay');
   summary.innerHTML = `
     <div class="booking-summary-item"><span class="label">Date</span><span class="value">${bookingState.selectedDate.toLocaleDateString('en-US', { weekday:'long', month:'long', day:'numeric', year:'numeric' })}</span></div>
@@ -1265,6 +1265,30 @@ window.bookingSubmit = function(){
 </script>
 </body>
 </html>
+/home/engine/.bashrc: line 1: syntax error near unexpected token `('
+/home/engine/.bashrc: line 1: `. /etc/profile.d/workload-containment.shn# ~/.bashrc: executed by bash(1) for non-login shells.'
+/home/engine/.bashrc: line 1: syntax error near unexpected token `('
+/home/engine/.bashrc: line 1: `. /etc/profile.d/workload-containment.shn# ~/.bashrc: executed by bash(1) for non-login shells.'
+/home/engine/.bashrc: line 1: syntax error near unexpected token `('
+/home/engine/.bashrc: line 1: `. /etc/profile.d/workload-containment.shn# ~/.bashrc: executed by bash(1) for non-login shells.'
+/home/engine/.bashrc: line 1: syntax error near unexpected token `('
+/home/engine/.bashrc: line 1: `. /etc/profile.d/workload-containment.shn# ~/.bashrc: executed by bash(1) for non-login shells.'
+/home/engine/.bashrc: line 1: syntax error near unexpected token `('
+/home/engine/.bashrc: line 1: `. /etc/profile.d/workload-containment.shn# ~/.bashrc: executed by bash(1) for non-login shells.'
+/home/engine/.bashrc: line 1: syntax error near unexpected token `('
+/home/engine/.bashrc: line 1: `. /etc/profile.d/workload-containment.shn# ~/.bashrc: executed by bash(1) for non-login shells.'
+/home/engine/.bashrc: line 1: syntax error near unexpected token `('
+/home/engine/.bashrc: line 1: `. /etc/profile.d/workload-containment.shn# ~/.bashrc: executed by bash(1) for non-login shells.'
+/home/engine/.bashrc: line 1: syntax error near unexpected token `('
+/home/engine/.bashrc: line 1: `. /etc/profile.d/workload-containment.shn# ~/.bashrc: executed by bash(1) for non-login shells.'
+/home/engine/.bashrc: line 1: syntax error near unexpected token `('
+/home/engine/.bashrc: line 1: `. /etc/profile.d/workload-containment.shn# ~/.bashrc: executed by bash(1) for non-login shells.'
+/home/engine/.bashrc: line 1: syntax error near unexpected token `('
+/home/engine/.bashrc: line 1: `. /etc/profile.d/workload-containment.shn# ~/.bashrc: executed by bash(1) for non-login shells.'
+/home/engine/.bashrc: line 1: syntax error near unexpected token `('
+/home/engine/.bashrc: line 1: `. /etc/profile.d/workload-containment.shn# ~/.bashrc: executed by bash(1) for non-login shells.'
+/home/engine/.bashrc: line 1: syntax error near unexpected token `('
+/home/engine/.bashrc: line 1: `. /etc/profile.d/workload-containment.shn# ~/.bashrc: executed by bash(1) for non-login shells.'
 /home/engine/.bashrc: line 1: syntax error near unexpected token `('
 /home/engine/.bashrc: line 1: `. /etc/profile.d/workload-containment.shn# ~/.bashrc: executed by bash(1) for non-login shells.'
 /home/engine/.bashrc: line 1: syntax error near unexpected token `('
